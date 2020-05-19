@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Bahnschrift";
+}
+body{
+    background: #000;
+}
+video{
+    width: 100%; 
+    height: 60hv;
+    position: absolute;
+    margin: 0;
+    transition: 1s;
+}
+.container-banner{
+    width: 100%;
+    height: 60vw;
+    position:relative;
+    margin-top: 100px;
+}
+.container-inf{
+    width: 450px;
+    height: 650px;
+    left: 60%;
+    margin-top: 40px;
+    position:absolute;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.74);
+}
+.container-inf h2{
+    width: auto;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+    background: none;
+}
+.container-inf p{
+    font-family: "Rockwell";
+    line-height: 1.5;
+    background: none;
+    padding: 25px;
+}
+.container-inf button{
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+}
+
+.stopfade { 
+    opacity: .5;
+    transition: 1s;
+}
+
+/*Audio*/
+#player {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    position:relative;
+    display:block;
+    border-radius: 50%;
+    border: 10px solid #D0D0D0;
+    margin-bottom: 200px;
+}
+#player .cover {
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left:0;
+    border-radius: 50%;
+}
+#player .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+#player .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 115px;
+    background-color: #000;
+}
+#player .info .cont {
+    text-align: center;
+    padding-top: 25px;
+}
+#player .trackinfo {
+    position: absolute;
+    bottom: 135px;
+    color: #FFF;
+}
+#player .trackinfo p {
+    text-shadow: 0px 0px 5px #333;
+}
+#player .trackinfo #title {
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+#player .trackinfo #artist {
+    padding-left: 25px;
+}
+#track {
+    width: 366px;
+    height: 5px;
+    position: absolute;
+    background-color: #A6A7A9;
+    bottom: 115px;
+    left: 17px;
+    z-index: 10;
+    cursor: pointer;
+}
+#progress {
+    float: left;
+    height: 5px;
+    width: 0%;
+    background: #00CC99;
+    cursor: pointer;
+}
+#handler {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #00CC99;
+    top: 50%;
+    left: 0%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+.nav {
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    background-color: #FFF;
+    border: 2px solid #00CC99;
+    border-radius: 50%;
+    outline: none;
+    margin: 0 7px;
+    cursor: pointer;
+}
+.nav:hover {
+    background-color: #00CC99;
+    
+}
+.nav img {
+    height: 20px;
+    vertical-align: middle;
+}
+.pad {
+    padding-left: 5px;
+}
+#prev {
+    padding-right: 5px;
+}
+#next {
+    padding-left: 4px;
+}
+
+.title h1{
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/*Canvas */
+
+
+.large-header {
+   position: relative;
+   width: 100%;
+   height: 100vw;
+   background: #111;
+   overflow: hidden;
+   background-size: cover;
+   background-position: center center;
+   z-index: 1;
+}
+
+.demo .large-header {
+   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 0;
+   color: #F9F1E9;
+   text-align: center;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+}
+
+.demo .main-title {
+   text-transform: uppercase;
+   font-size: 4.2em;
+   letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+   .demo .main-title {
+      font-size: 3em;
+   }
+}
